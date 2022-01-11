@@ -10,7 +10,7 @@
 <body>
     <div class="menu">
         <a href="index.html">Inicio</a>
-        <a href="git acceso.php">Acceso</a>
+        <a href="acceso.php">Acceso</a>
         <a href="registro.php">Registrar</a>
         <a href="modificar.php">Modificar</a>
         <a href="eliminar.php">Eliminar</a>
