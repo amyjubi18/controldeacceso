@@ -19,9 +19,6 @@
         <div class="contenedor_3">
             <form action="registro_estudiante_bd.php" method="POST" class="formulario-registro">
                 <h1>Registro</h1>
-                <!-- <label for="id_estudiantes">ID     </label>
-                <input type="text" id="id_estudiantes" name="id_estudiantes" style="text-align:right;">
-                <br> -->
                 <label for="periodo">Periodo academico</label>
                 <select name="periodo_id" id="periodo_id" >
                     <option value="0">Seleccione el Periodo</option>
@@ -73,7 +70,6 @@
                     </optgroup>
                 </select>  -->
                 <br>
-                <!-- <button>Registrar</button> -->
                 <input type="submit" value="Registrar" >
             
         </div>
