@@ -5,15 +5,17 @@
     text-decoration: none;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
     ;
+
 }
 body{
-    background-color: rgb(150, 183, 253);
     padding: 20px;
+    background: rgb(150, 183, 253);
+
 }
 .menu{
     background-color: rgb(3, 3, 114);
     padding: 0.5rem;
-    width: 48%; 
+    width: 50%; 
     border-radius: 15px;
     display: flex;
     margin: 1rem;
@@ -53,7 +55,7 @@ main{
 }
 .contenedor_3 form{
     width:  100%; 
-    text-align: center;
+    text-align: left;
 
 }
 .contenedor_3 form h1{
