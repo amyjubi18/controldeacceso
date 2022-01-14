@@ -1,7 +1,7 @@
 <?php
 
 include 'conexion.php';
-require ('controldeacceso/phpqrcode/qrlib.php');
+require ('C:/Users/Amanda/Desktop/controldeacceso/phpqrcode/qrlib.php');
 $periodo_id = $_POST['periodo_id'];
 $nombre_est = $_POST['nombre_est'];
 $apellido_est = $_POST['apellido_est'];
