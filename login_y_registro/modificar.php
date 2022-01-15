@@ -7,7 +7,11 @@
     <title>Modificar</title>
 </head>
 <body>
-
+<style>
+    body{
+        background-color: cadetblue;
+    }
+</style>
 <div class="menu">
         <a href="index.html">Inicio</a>
         <a href="acceso.php">Acceso</a>
@@ -17,8 +21,8 @@
 
 <div class= "todo">
 
-    <div id= "contenido">
-        <table style="margin: auto;  border-collapse: separate; border-spacing: 10px 5px;">
+    <div id= "contenido" style="margin-top: -650px;">
+        <table style="margin: auto;  border-collapse: separate; border-spacing: 25px 5px; border-color:cornflowerblue;">
         <thead>
             <th>ID</th>
             <th>Periodo</th>
@@ -26,6 +30,7 @@
             <th>Apellidos del Estudiante</th>
             <th>Cedula del Estudiante</th>
             <th>Codigo de la Carrera</th>
+            <th>Codigo QR</th>
         </thead>
 <?php
 include "conexion.php";
@@ -42,6 +47,7 @@ while($filas= $resultado->fetch_assoc())
         echo "<td>"; echo $filas ['apellido_est']; echo "</td>"; echo "<br>";
         echo "<td>"; echo $filas ['cedula_est']; echo "</td>"; echo "<br>";
         echo "<td>"; echo $filas ['cod_carrera']; echo "</td>"; echo "<br>";
+        /*echo "<td>"; echo $filas ['qr']; echo "</td>"; echo "<br>";*/
         echo "<td> <a href='modificar_est.php'> <buttom type= 'buttom' class='btn btn-success'> Modificar </buttom> </a> </td>";
         echo "<td> <a href='#'> <buttom type= 'buttom' class='btn btn-danger'> Eliminar </buttom> </a> </td>";
     echo "</tr>";
