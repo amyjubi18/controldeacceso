@@ -48,19 +48,46 @@
 	  <form action="modificar_est2.php" method="POST" style="border-collapse: separate; border-spacing: 10px 5px;">
       <input type="hidden" name="id_estudiantes" value="<?php echo $_GET['id_estudiantes']?> ">
   		<label>Periodo </label>
-  		<input type="text" id="periodo_id" name="periodo_id"; value="<?php echo $consulta[0] ?>" ><br>
+  		<select class="form-select" name="periodo_id" id="periodo_id" value="<?php echo $consulta[0] ?>" >
+                    <option value="0">Seleccione el Periodo</option>
+                <?php
+                include("conexion.php");
+                $consulta = "SELECT * FROM periodo";
+                
+                $ejecutar = mysqli_query($conexion, $consulta);
+                while($row1 = mysqli_fetch_array($ejecutar)){
+                    $periodo_id = $row1['periodo_id'];
+                   echo "<option value = '".$periodo_id."'>".$periodo_id."</option>";
+
+                }
+                ?>
+                </select><br>
   		
   		<label>Nombres del Estudiante </label>
   		<input type="text" id="nombre_est" name="nombre_est" value="<?php echo $consulta[1] ?>"><br>
   		
           <label>Apellidos del Estudiante </label>
-  		<input type="text" id="nombre_est" name="apellido_est" value="<?php echo $consulta[2] ?>"><br>
+  		<input type="text" id="apellido_est" name="apellido_est" value="<?php echo $consulta[2] ?>"><br>
   		
           <label>Cedula del Estudiante </label>
   		<input type="text" id="cedula_est" name="cedula_est" value="<?php echo $consulta[3] ?>"><br>
   		
           <label>Codigo de la carrera </label>
-  		<input type="text" id="cod_carrera" name="cod_carrera" value="<?php echo $consulta[4] ?>"><br>
+          <select class="form-select" name="cod_carrera" id="cod_carrera" value="<?php echo $consulta[4] ?>">
+                    <option value="0">Seleccione la Carrera</option>
+                <?php
+                include("conexion.php");
+                $consulta = "SELECT * FROM carrera";
+                
+                $ejecutar = mysqli_query($conexion, $consulta);
+                while($row = mysqli_fetch_array($ejecutar)){
+                    $cod_carrera = $row['cod_carrera'];
+                    $carreras =$row['carreras'];
+                   echo "<option value = '".$cod_carrera."'>".$cod_carrera." ".$carreras."</option>";
+
+                }
+                ?>
+                </select>  <br>
   		
   		<br>
   		<button type="submit" class="btn btn-success">Guardar</button>

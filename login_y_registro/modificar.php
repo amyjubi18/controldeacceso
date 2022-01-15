@@ -42,7 +42,7 @@ while($filas= $resultado->fetch_assoc())
         echo "<td>"; echo $filas ['apellido_est']; echo "</td>"; echo "<br>";
         echo "<td>"; echo $filas ['cedula_est']; echo "</td>"; echo "<br>";
         echo "<td>"; echo $filas ['cod_carrera']; echo "</td>"; echo "<br>";
-        echo "<td> <a href='modificar.php'> <buttom type= 'buttom' class='btn btn-success'> Modificar </buttom> </a> </td>";
+        echo "<td> <a href='modificar_est.php'> <buttom type= 'buttom' class='btn btn-success'> Modificar </buttom> </a> </td>";
         echo "<td> <a href='#'> <buttom type= 'buttom' class='btn btn-danger'> Eliminar </buttom> </a> </td>";
     echo "</tr>";
 }

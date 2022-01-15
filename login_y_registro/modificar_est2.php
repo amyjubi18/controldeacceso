@@ -13,14 +13,14 @@
         echo '
         <script>
         alert("Datos modificados correctamente");
-        window.location = "/login_y_registro/modificar.php"
+        window.location = "controldeacceso-1/login_y_registro/modificar.php"
         </script>
         ';
     }else{
         echo '
         <script>
-        alert("erorr en modificacion");
-        window.location = "/login_y_registro/modificar.php"
+        alert("error en modificacion");
+        window.location = "controldeacceso-1/login_y_registro/modificar.php"
         </script>
         ';
     }
