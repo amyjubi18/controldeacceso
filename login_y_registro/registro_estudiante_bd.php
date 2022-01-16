@@ -8,15 +8,13 @@ $apellido_est = $_POST['apellido_est'];
 $cedula_est = $_POST['cedula_est'];
 $cod_carrera = $_POST['cod_carrera'];
 $generar =  QRcode::png($cedula_est,"codigo/qr_".$cedula_est.".png",'L',10,5);
+$dir= 'codigo/qr_".$cedula_est."';
+if(!file_exists($dir))
+mkdir ($dir);
 // var_dump($generar);
 
-// $qr = addslashes(file_get_contents($_POST[$generar]['tmp_name']));
-// $ruta = "temp/qr_".$cedula_est.".png";
-
-
-
 $query = "INSERT INTO estudiantes (periodo_id, nombre_est, apellido_est, cedula_est, cod_carrera, qr)
-VALUES('$periodo_id', '$nombre_est', '$apellido_est', '$cedula_est', '$cod_carrera', 'var_dump($generar)')";
+VALUES('$periodo_id', '$nombre_est', '$apellido_est', '$cedula_est', '$cod_carrera', 'var_dump(mkdir)')";
 
 $ejecutar = mysqli_query($conexion, $query);
 
@@ -29,6 +27,7 @@ if($ejecutar){
     window.location = "/login_y_registro/modificar.php"
     </script>
     ';
+
      
     // echo '<img src= "'.$gen.basename($ruta).'"/>';
     
