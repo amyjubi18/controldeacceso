@@ -1,7 +1,7 @@
 
 <?php
   
-
+include "conexion.php";
   $consulta=ConsultarEstudiantes($_GET['id_estudiantes']);
 
   function ConsultarEstudiantes($id_est)

@@ -62,7 +62,7 @@ if(file_exists($file_name)){
 
   <img src="<?php echo $file;?>">
   <br>
-  <a href="generar_carnet.php?image=<?php echo $file?>" class="btn btn-success">Imprimir Carnet</a>
+  <a href="generar_carnet.php" class="btn btn-success">Imprimir Carnet</a>
 
 </div>
 <?php
