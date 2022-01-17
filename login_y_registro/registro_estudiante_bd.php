@@ -7,10 +7,10 @@ $nombre_est = $_POST['nombre_est'];
 $apellido_est = $_POST['apellido_est'];
 $cedula_est = $_POST['cedula_est'];
 $cod_carrera = $_POST['cod_carrera'];
-$generar =  QRcode::png($cedula_est,"codigo/qr_".$cedula_est.".png",'L',10,5);
-$dir= 'codigo/qr_".$cedula_est."';
+// $generar =  QRcode::png($cedula_est,"codigo/qr_".$cedula_est.".png",'L',10,5);
+/* $dir= 'codigo/qr_".$cedula_est."';
 if(!file_exists($dir))
-mkdir ($dir);
+mkdir ($dir); */
 // var_dump($generar);
 
 $query = "INSERT INTO estudiantes (periodo_id, nombre_est, apellido_est, cedula_est, cod_carrera, qr)
@@ -18,18 +18,55 @@ VALUES('$periodo_id', '$nombre_est', '$apellido_est', '$cedula_est', '$cod_carre
 
 $ejecutar = mysqli_query($conexion, $query);
 
-
-
 if($ejecutar){
-   echo '
-    <script>
-    alert("Estudiante registrado exitosamente");
-    window.location = "/login_y_registro/modificar.php"
-    </script>
-    ';
+    $file='';
+ if(isset($_POST['sub']))
+ {
+     $file ="codigo/".$cedula_est."_".$nombre_est."_".$apellido_est.".png";
+     QRcode::png($cedula_est,$file,'L',10,5 );
+ }
+ if(isset($_GET['image'])){
+     $file_name= $_GET['image'];
+     $mostrar_nombre= $_GET['nombre_est'];
+     $mostrar_apellido =$_GET['apellido_est'];
+     $mostrar_cedula= $_GET['cedula_est'];
+     $mostrar_carrera= $_GET['cod_carrera'];
 
-     
-    // echo '<img src= "'.$gen.basename($ruta).'"/>';
+if(file_exists($file_name)){
+    header('Content-Description: File Transfer');
+    header('Content-Type: aplication/image');
+    header('Content-Disposition: attachment; filename="'.basename($file_name).'"');
+    header('Content-Length:'.filesize($file_name));
+    readfile($file_name);
+}
+ }    
+ if(isset($_GET['image'])){
+  $file_name= $_GET['image'];
+      if(file_exists($file_name)){
+          header('Content-Description: File Transfer');
+          header('Content-Type: aplication/image');
+          header('Content-Disposition: attachment; filename="'.basename($file_name).'"');
+          header('Content-Length:'.filesize($file_name));
+          readfile($file_name);
+      }
+  }
+  if(!empty($file)){
+      ?>
+<div name="registrado">
+  <h1>Registro exitoso</h1>
+  <h4>Nombre: <?php echo $nombre_est; ?></h4>
+  <h4>Apellido: <?php echo $apellido_est; ?></h4>
+  <h4>Cedula: <?php echo $cedula_est; ?></h4>
+  <h4>Carrera: <?php echo $cod_carrera; ?></h4>
+
+
+  <img src="<?php echo $file;?>">
+  <br>
+  <a href="generar_carnet.php?image=<?php echo $file?>" class="btn btn-success">Imprimir Carnet</a>
+
+</div>
+<?php
+}
     
 }else{
     echo '
@@ -41,99 +78,5 @@ if($ejecutar){
 }
  mysqli_close($conexion);
 
- /*------------------------------------------------------------------------------------------*/
-
-/* Procura no usar variables intermedias, usa siempre las originales */
-/* $sql = "INSERT INTO estudiantes (periodo_id, nombre_est, apellido_est, cedula_est, cod_carrera, qr)
-VALUES('$periodo_id', '$nombre_est', '$apellido_est', '$cedula_est', '$cod_carrera', '$qr')";
-
-$resultado = $mysqli->query($sql);
-if ($resultado === false) {
-  die(htmlspecialchars('Error en inserción: '. $mysqli->error));
-}
-$id_insert = $mysqli->insert_id;
-
-if ($_FILES["archivo1"]["error"] > 0) {
-  echo "Error al cargar archivo"; 
-} else {
-  $permitidos = array(
-    "image/gif",
-    "image/png",
-    "application/pdf"
-  );
-  $limite_kb = 800;
-
-  /* La comprobación de tamaño es innecesaria(*) */
-  /* if (in_array($_FILES["archivo1"]["type"], $permitidos)
-    && $_FILES["archivo1"]["size"] <= $limite_kb * 1024
-  ) {
-    $ruta = '/codigo'. $id_insert .'/';
-    $archivo = $ruta . $_FILES["archivo1"]["name"];
-    if (!file_exists($ruta)) {
-      mkdir($ruta);
-    }
-    if (!file_exists($archivo)) {
-      $resultado = @move_uploaded_file(
-        $_FILES["archivo1"]["tmp_name"],
-        $archivo
-      ); */
-      /* Si se copió correctamente actualizaremos en la base de datos la ruta */
-      /* if ($resultado !== false) {
-        $sql = "UPDATE estudiantes SET 'codigo/qr_".$cedula_est.".png"' = '". mysqli::real_escape_string.($archivo) ."' WHERE id = '". mysqli::real_escape_string.($id_insert) ."'";
-        $resultado = $mysqli->query($sql);
-        if ($resultado === false) {
-          die(htmlspecialchars('Error en actualización: '. $mysqli->error));
-        }
-      } else {
-        echo "Error al guardar archivo";
-      }
-    } else {
-      echo "Archivo ya existe";
-    }
-  } else {
-    echo "Archivo no permitido o excede el tamaño";
-  }
-} */ 
-/*----------------------------------------------------------------------------------*/
-/* if(isset($_POST["submit"])){
-    $revisar = getimagesize($_FILES["image"]["tmp_name"]);
-    if($revisar !== false){
-        $periodo_id = $_POST['periodo_id'];
-        $nombre_est = $_POST['nombre_est'];
-        $apellido_est = $_POST['apellido_est'];
-        $cedula_est = $_POST['cedula_est'];
-        $cod_carrera = $_POST['cod_carrera'];
-        $generar =  QRcode::png($cedula_est,"codigo/qr_".$cedula_est.".png",'L',10,5);
-        $image = $_FILES['image']['tmp_name'];
-        $imgContenido = addslashes(file_get_contents($image));
-        
-        //Credenciales Mysql
-        $Host = 'localhost';
-        $Username = 'root';
-        $Password = '';
-        $dbName = 'controldeacceso';
-        
-        //Crear conexion con la abse de datos
-        $db = new mysqli($Host, $Username, $Password, $dbName);
-        
-        // Cerciorar la conexion
-        if($db->connect_error){
-            die("Connection failed: " . $db->connect_error);
-        }
-        
-        
-        //Insertar imagen en la base de datos
-        $insertar = $db->query("INSERT into estudiantes (periodo_id, nombre_est, apellido_est, cedula_est, cod_carrera, qr)
-        VALUES('$periodo_id', '$nombre_est', '$apellido_est', '$cedula_est', '$cod_carrera', '$image')");
-        // COndicional para verificar la subida del fichero
-        if($insertar){
-            echo "Archivo Subido Correctamente.";
-        }else{
-            echo "Ha fallado la subida, reintente nuevamente.";
-        } 
-        // Sie el usuario no selecciona ninguna imagen
-    }else{
-        echo "Por favor seleccione imagen a subir.";
-    }
-} */
+ 
 ?>
