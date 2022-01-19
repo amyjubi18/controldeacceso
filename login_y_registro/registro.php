@@ -11,11 +11,11 @@
 </head>
 <body>
     <div class="menu">
-        <a href="index.html">Inicio</a>
-        <a href="acceso.php">Acceso</a>
-        <a href="registro.php">Registrar</a>
-        <a href="modificar.php">Modificar</a>
-        <a href="eliminar.php">Eliminar</a>
+        <a href="../login_y_registro/index.html">Inicio</a>
+        <a href="../qr/lector_qr.php">Acceso</a>
+        <a href="../login_y_registro/registro.php">Registrar</a>
+        <a href="../login_y_registro/modificar.php">Modificar</a>
+        <a href="../login_y_registro/eliminar.php">Eliminar</a>
     </div>
     <main>
         <div class="contenedor_3">

@@ -13,8 +13,8 @@ if(!file_exists($dir))
 mkdir ($dir); */
 // var_dump($generar);
 
-$query = "INSERT INTO estudiantes (periodo_id, nombre_est, apellido_est, cedula_est, cod_carrera, qr)
-VALUES('$periodo_id', '$nombre_est', '$apellido_est', '$cedula_est', '$cod_carrera', 'var_dump(mkdir)')";
+$query = "INSERT INTO estudiantes (periodo_id, nombre_est, apellido_est, cedula_est, cod_carrera)
+VALUES('$periodo_id', '$nombre_est', '$apellido_est', '$cedula_est', '$cod_carrera')";
 
 $ejecutar = mysqli_query($conexion, $query);
 

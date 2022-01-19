@@ -13,11 +13,11 @@
     }
 </style>
 <div class="menu">
-        <a href="index.html">Inicio</a>
-        <a href="acceso.php">Acceso</a>
-        <a href="registro.php">Registrar</a>
-        <a href="modificar.php">Modificar</a>
-        <a href="eliminar.php">Eliminar</a>
+        <a href="../login_y_registro/index.html">Inicio</a>
+        <a href="../qr/lector_qr.php">Acceso</a>
+        <a href="../login_y_registro/registro.php">Registrar</a>
+        <a href="../login_y_registro/modificar.php">Modificar</a>
+        <a href="../login_y_registro/eliminar.php">Eliminar</a>
 
 <div class= "todo">
 
@@ -30,7 +30,6 @@
             <th>Apellidos del Estudiante</th>
             <th>Cedula del Estudiante</th>
             <th>Codigo de la Carrera</th>
-            <th>Codigo QR</th>
         </thead>
 <?php
 include "conexion.php";
@@ -47,7 +46,6 @@ while($filas= $resultado->fetch_assoc())
         echo "<td>"; echo $filas ['apellido_est']; echo "</td>"; echo "<br>";
         echo "<td>"; echo $filas ['cedula_est']; echo "</td>"; echo "<br>";
         echo "<td>"; echo $filas ['cod_carrera']; echo "</td>"; echo "<br>";
-        /*echo "<td>"; echo $filas ['qr']; echo "</td>"; echo "<br>";*/
         echo "<td> <a href='modificar_est.php'> <buttom type= 'buttom' class='btn btn-success'> Modificar </buttom> </a> </td>";
         echo "<td> <a href='#'> <buttom type= 'buttom' class='btn btn-danger'> Eliminar </buttom> </a> </td>";
     echo "</tr>";
