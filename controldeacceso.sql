@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-01-2022 a las 23:09:27
+-- Tiempo de generación: 19-01-2022 a las 21:20:21
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 7.3.0
 
@@ -57,6 +57,26 @@ INSERT INTO `carrera` (`cod_carrera`, `carreras`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `entrada`
+--
+
+CREATE TABLE `entrada` (
+  `id_entrada` int(11) NOT NULL,
+  `cedula_est` int(10) NOT NULL,
+  `fecha_hora` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `entrada`
+--
+
+INSERT INTO `entrada` (`id_entrada`, `cedula_est`, `fecha_hora`) VALUES
+(9, 25565616, '2022-01-19 15:15:06'),
+(10, 25565678, '2022-01-19 15:15:22');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `estudiantes`
 --
 
@@ -74,8 +94,8 @@ CREATE TABLE `estudiantes` (
 --
 
 INSERT INTO `estudiantes` (`id_estudiantes`, `periodo_id`, `nombre_est`, `apellido_est`, `cedula_est`, `cod_carrera`) VALUES
-(3, 20141, 'gugu', 'fxkgjhsdh', 4545, 1022),
-(4, 20142, 'amanda', 'garcia', 25565678, 1026);
+(64, 20142, 'Wenderly', 'Castellano', 25565616, 1026),
+(65, 20142, 'Amanda', 'Garcia', 25565678, 1026);
 
 -- --------------------------------------------------------
 
@@ -121,10 +141,18 @@ ALTER TABLE `carrera`
   ADD PRIMARY KEY (`cod_carrera`);
 
 --
+-- Indices de la tabla `entrada`
+--
+ALTER TABLE `entrada`
+  ADD PRIMARY KEY (`id_entrada`),
+  ADD UNIQUE KEY `cedula_est` (`cedula_est`);
+
+--
 -- Indices de la tabla `estudiantes`
 --
 ALTER TABLE `estudiantes`
   ADD PRIMARY KEY (`id_estudiantes`),
+  ADD UNIQUE KEY `cedula_est` (`cedula_est`),
   ADD KEY `cod_carrera` (`cod_carrera`),
   ADD KEY `periodo` (`periodo_id`),
   ADD KEY `periodo_id` (`periodo_id`);
@@ -140,10 +168,16 @@ ALTER TABLE `periodo`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `entrada`
+--
+ALTER TABLE `entrada`
+  MODIFY `id_entrada` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
 -- AUTO_INCREMENT de la tabla `estudiantes`
 --
 ALTER TABLE `estudiantes`
-  MODIFY `id_estudiantes` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_estudiantes` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- Restricciones para tablas volcadas

@@ -1,4 +1,4 @@
-document.getElementById("bonton-inicio-sesion").addEventListener("click", iniciar);
+document.getElementById("boton-inicio-sesion").addEventListener("click", iniciar);
 
 //declaracion de variables
 // var formulario_login = document.querySelector('.formulario-login');
