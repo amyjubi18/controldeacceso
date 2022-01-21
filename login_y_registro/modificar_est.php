@@ -46,7 +46,8 @@
   		<span> <h1>Modificar</h1> </span>
   		<br>
 	  <form action="modificar_est2.php" method="POST" style="border-collapse: separate; border-spacing: 10px 5px;">
-      <input type="hidden" name="id_estudiantes" value="<?php echo $_GET['id_estudiantes']?> " >
+    <label>ID</label>  
+   <b> <input type="text" name="id_estudiantes" value="<?php echo $_GET['id_estudiantes']?> " readonly="true" style="background-color: gray; "></b><br>
   		<label>Periodo </label>
       <input type="text" id="periodo_id" name="periodo_id" value="<?php echo $consulta[0] ?>" readonly="true" style="background-color: gray;"><br>
   		
