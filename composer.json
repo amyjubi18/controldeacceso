@@ -1,5 +1,6 @@
 {
     "require": {
-        "khanamiryan/qrcode-detector-decoder": "1.0.5.2"
+        "khanamiryan/qrcode-detector-decoder": "1.0.5.2",
+        "phpmailer/phpmailer": "^6.5"
     }
 }

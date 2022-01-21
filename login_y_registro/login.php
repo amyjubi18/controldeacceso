@@ -14,7 +14,7 @@
         <div class="contenedor_1">
             <div class="caja-posterior">
                 <p>Inicia sesión para entrar en la pagina</p>
-                <button id="bonton-inicio-sesion">Iniciar Sesión</button>
+                <button id="boton-inicio-sesion">Iniciar Sesión</button>
             </div>
 
         </div>

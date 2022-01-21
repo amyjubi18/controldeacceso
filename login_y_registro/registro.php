@@ -23,7 +23,7 @@
                 <h1>Registro</h1>
                 <div class="mb-3">
   <label for="periodo" class="form-label">Periodo academico</label>
-                <select class="form-select" name="periodo_id" id="periodo_id" >
+                <select class="form-select" name="periodo_id" id="periodo_id" required>
                     <option value="0">Seleccione el Periodo</option>
                 <?php
                 include("conexion.php");
@@ -40,21 +40,24 @@
             </div>
             <div class="mb-3">
     <label for="nombre_est" class="form-label" name="nombre_est" id="nombre_est">Nombre</label>
-    <input type="text" class="form-control" id="nombre_est" name="nombre_est">
+    <input type="text" class="form-control" id="nombre_est" name="nombre_est" required>
   </div>
   <div class="mb-3">
     <label for="apellido_est" class="form-label" name="apellido_est" id="apellido_est">Apellido</label>
-    <input type="text" class="form-control" id="apellido_est" name="apellido_est">
+    <input type="text" class="form-control" id="apellido_est" name="apellido_est" required>
   </div>
   <div class="mb-3">
     <label for="cedula_est" class="form-label" name="cedula_est" id="cedula_est">Cédula</label>
-    <input type="text" class="form-control" id="cedula_est" name="cedula_est">
+    <input type="text" class="form-control" id="cedula_est" name="cedula_est" required minlength="6" maxlength="10">
   </div>
-  
+  <div class="mb-3">
+    <label for="correo_est" class="form-label" name="correo_est" id="correo_est">Correo Electrónico</label>
+    <input type="email" class="form-control" id="correo_est" name="correo_est" required minlength="6" maxlength="10">
+  </div>
             <div class="mb-3">
 
             <label for="carrera" class="form-label"> Carrera</label>
-                <select class="form-select" name="cod_carrera" id="cod_carrera" >
+                <select class="form-select" name="cod_carrera" id="cod_carrera" required >
                     <option value="0">Seleccione la Carrera</option>
                 <?php
                 include("conexion.php");

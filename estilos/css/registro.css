@@ -75,6 +75,14 @@ main{
     font-size: 16px;
     outline: none;
 }
+.contenedor_3 form input:invalid{
+    border: 2px solid red;
+
+}
+.contenedor_3 form input:valid{
+    border: 2px solid rgb(79, 80, 182);
+
+}
 /* .contenedor_2 form button{
     padding: 15px 40px;
     border-radius: 20px;
