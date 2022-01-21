@@ -11,8 +11,7 @@
         <a href="../login_y_registro/index.html">Inicio</a>
         <a href="../qr/lector_qr.php">Acceso</a>
         <a href="../login_y_registro/registro.php">Registrar</a>
-        <a href="../login_y_registro/modificar.php">Modificar</a>
-        <a href="../login_y_registro/eliminar.php">Eliminar</a>
+        <a href="../login_y_registro/modificar.php">listado</a>
     </div>
 
     <?php  

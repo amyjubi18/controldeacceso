@@ -9,17 +9,17 @@
     <link rel="stylesheet" href="/estilos/css/registro.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
-<body>
+<body id="body">
     <div class="menu">
         <a href="../login_y_registro/index.html">Inicio</a>
         <a href="../qr/lector_qr.php">Acceso</a>
         <a href="../login_y_registro/registro.php">Registrar</a>
-        <a href="../login_y_registro/modificar.php">Modificar</a>
-        <a href="../login_y_registro/eliminar.php">Eliminar</a>
+        <a href="../login_y_registro/modificar.php">Listado</a>
     </div>
     <main>
-        <div class="contenedor_3">
-         <form action="registro_estudiante_bd.php" method="POST" class="form-horizontal" enctype="multipart/form-data">
+        <div class="container">
+            <div class="abs-center">
+         <form action="registro_estudiante_bd.php" method="POST" class="border p-3 form" enctype="multipart/form-data">
                 <h1>Registro</h1>
                 <div class="mb-3">
   <label for="periodo" class="form-label">Periodo academico</label>
@@ -50,10 +50,6 @@
     <label for="cedula_est" class="form-label" name="cedula_est" id="cedula_est">Cédula</label>
     <input type="text" class="form-control" id="cedula_est" name="cedula_est" required minlength="6" maxlength="10">
   </div>
-  <div class="mb-3">
-    <label for="correo_est" class="form-label" name="correo_est" id="correo_est">Correo Electrónico</label>
-    <input type="email" class="form-control" id="correo_est" name="correo_est" required minlength="6" maxlength="10">
-  </div>
             <div class="mb-3">
 
             <label for="carrera" class="form-label"> Carrera</label>
@@ -73,13 +69,19 @@
                 ?>
                 </select>  
             </div>
-  <button type="submit" class="btn btn-primary" value="Registrar" name="sub">Registar</button>
-                
-            
-                
+            <br>
+            <div class="container-fluid h-100">
+            <div class="row w-100 align-items-center">
+                <br>
+  <button type="submit" class="btn btn-primary regular-button" value="Registrar" name="sub" id="sub">Registar</button>
+
+</div>          
+            </div>
+         <br>       
 </form>
         </div>
-        
+        </div>
+        <br>
     </main>
 
 </body>

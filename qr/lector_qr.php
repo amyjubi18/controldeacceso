@@ -9,15 +9,16 @@
     <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <title>QR</title>
+    <link rel="stylesheet" href="/estilos/css/acceso.css">
+
+    <title>Acceso QR</title>
 </head>
-<body>
+<body id="body">
 <div class="menu">
         <a href="../login_y_registro/index.html">Inicio</a>
         <a href="../qr/lector_qr.php">Acceso</a>
         <a href="../login_y_registro/registro.php">Registrar</a>
-        <a href="../login_y_registro/modificar.php">Modificar</a>
-        <a href="../login_y_registro/eliminar.php">Eliminar</a>
+        <a href="../login_y_registro/modificar.php">Listado</a>
     </div>
     <div class="contenedor">
     <h1>CONTROL DE ACCCESO DE ESTUDIANTES</h1>
@@ -26,12 +27,12 @@
             <br>
            
             <div class="col-md-6">
-                <video id="vista" width="80%" style="margin-left: 50px;"></video>
+                <video id="vista" width="70%" ></video>
                 
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" id="contenedor_form">
                 <form action="insertar.php" method="POST" class="form-horizontal">
-                <label> LECTOR DE CÓDIGO QR</label>
+                <label class="titulo"> LECTOR DE CÓDIGO QR</label>
                 <input type="text" name="cedula_est" id="cedula_est" readonly="true" placeholder="Datos del QR" class="form-control">
                 </form>
                 <br>

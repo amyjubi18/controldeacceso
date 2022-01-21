@@ -2,28 +2,33 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modificar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/estilos/css/modificar1.css">
+
+    <title>Listado</title>
 </head>
-<body>
+<body id="body">
 
 <div class="menu">
         <a href="../login_y_registro/index.html">Inicio</a>
         <a href="../qr/lector_qr.php">Acceso</a>
         <a href="../login_y_registro/registro.php">Registrar</a>
-        <a href="../login_y_registro/modificar.php">Modificar</a>
-        <a href="../login_y_registro/eliminar.php">Eliminar</a>
+        <a href="../login_y_registro/modificar.php">Listado</a>
         <br>
-        <div>
+        <br>
+</div>
+<div class="contenedor_buscar">
         <form action="buscar.php" method= "post";>
-        <input type="text" name="buscar" id= ""> 
-        <input type = "submit" value = "Buscar" id=""></form> 
+        <input type="text" name="buscar" id= "buscar"> 
+        <input type = "submit" value = "Buscar" id="boton_buscar"></form> 
          </div>
 <div class= "todo">
 
-    <div id= "contenido" style="margin-top: -500px;">
-        <table style="margin: auto;  border-collapse: separate; border-spacing: 25px 5px; border-color:cornflowerblue;">
+    <div id= "contenido" >
+    
+        <table  id="tabla">
         <thead>
             <th>ID</th>
             <th>Periodo</th>
@@ -33,6 +38,7 @@
             <th>Codigo de la Carrera</th>
             <th>Opción</th>
         </thead>
+
 <?php
 include "conexion.php";
 
@@ -43,7 +49,8 @@ $resultado = mysqli_query($conexion, $consultar) or die (mysqli_error($conexion)
 while($filas= $resultado->fetch_assoc())
 {
     echo "<tr>";
-        echo "<td>"; echo $filas ['id_estudiantes']; echo "</td>"; echo "<br>";
+    echo "<tbody>";
+        echo "<td>"; echo "<b>"; echo $filas ['id_estudiantes']; echo"</b>"; echo "</td>"; echo "<br>";
         echo "<td>"; echo $filas ['periodo_id']; echo "</td>"; echo "<br>";
         echo "<td>"; echo $filas ['nombre_est']; echo "</td>"; echo "<br>";
         echo "<td>"; echo $filas ['apellido_est']; echo "</td>"; echo "<br>";
@@ -51,7 +58,8 @@ while($filas= $resultado->fetch_assoc())
         echo "<td>"; echo $filas ['cod_carrera']; echo "</td>"; echo "<br>";
         echo "<td> <a href='modificar_est.php?id_estudiantes=".$filas['id_estudiantes']."'> <buttom type= 'buttom' class='btn btn-success'> Modificar </buttom> </a> </td>";
         echo "<td> <a href='eliminar1.php'> <buttom type= 'buttom' class='btn btn-danger'> Eliminar </buttom> </a> </td>";
-    echo "</tr>";
+    echo "</tbody>";
+        echo "</tr>";
 }
 
 ?> 

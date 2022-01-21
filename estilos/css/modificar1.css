@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    ;
+
+}
+#body{
+    background-color: rgb(150, 183, 253);
+
+}
+.menu{
+    background-color: rgb(3, 3, 114);
+    padding: 0.5rem;
+    width: 35%; 
+    border-radius: 0px 5px 10px 5px;
+    display: flex;
+    position: relative;
+
+} 
+ .menu a{
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+.menu a:hover{
+    background-color: white;
+    color: blue;
+    border-radius: 10px;
+    transition: ease-in-out 300ms;
+}
+.contenedor_buscar{
+    margin-top: 30px;
+    justify-content: center;
+    display: flex;
+}
+#buscar{
+    height: 30px;
+
+}
+
+#boton_buscar{
+    padding: 10px 40px;
+    border-radius: 20px;
+    background-color: blue;
+    color: white;
+    justify-content: center;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    transition:ease-in-out 4.5ms;
+}
+#boton_buscar:hover{
+    background-color: white;
+    color: blue;
+    border: 2px blue solid;
+} 
+#tabla{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-collapse: unset;
+    border-spacing: 1px;
+    border: 3px solid blue;
+    width: 90%;
+    margin-left: 50px;
+    
+}
+
+#tabla th{
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 5px 10px 5px;
+    justify-content: center;
+    align-items: center;
+    white-space: pre-line;
+    text-decoration: underline;
+    text-shadow: black;
+}
+#tabla td{
+    text-align: center;
+}
+br{
+    display: none;
+}
+.todo{
+    
+    white-space: pre-line;
+}

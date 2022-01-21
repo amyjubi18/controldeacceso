@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    ;
+
+}
+#body{
+    background-color: rgb(150, 183, 253);
+
+}
+.menu{
+    background-color: rgb(3, 3, 114);
+    padding: 0.5rem;
+    width: 35%; 
+    border-radius: 0px 5px 10px 5px;
+    display: flex;
+    position: relative;
+
+} 
+ .menu a{
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+.menu a:hover{
+    background-color: white;
+    color: blue;
+    border-radius: 10px;
+    transition: ease-in-out 300ms;
+}
+.container{
+    width: 450px; 
+    padding: 30px 30px; 
+    display: block;
+    justify-content: center; 
+    backdrop-filter: blur(7px);
+    border-radius: 15px;
+    margin-left: 15%;
+    position: relative;
+
+}
+.abs-center{
+    margin-left: 32%;
+    background-color: white;
+    padding: 20px;
+    width: 350px;
+    margin-top: 25px;
+    height: 614px;
+}
+.mem{
+    padding: 10px 50px 10px 50px;
+    margin-top: -45px;
+}
+.membrete{
+    text-align: center;
+}
+#usuario{
+    width: 42%;
+    margin-left: 86px;
+    border: 3px solid black;
+    margin-bottom: 20px;
+}
+#qr{
+    margin-left: 54px;
+    margin-top: -3px;
+    width: 65%;
+}
+#logo1{
+    width: 24%;
+    margin-top: -27px;
+}
+#logo2{
+    width: 17%;
+    margin-left: 171px;
+    margin-top: -12px;
+}
+
+.datos{
+    margin-left: 50px;
+}
+.datos h6{
+    font-size: 14px;
+}
