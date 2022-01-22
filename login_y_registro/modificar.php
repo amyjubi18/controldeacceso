@@ -28,7 +28,7 @@
 
     <div id= "contenido" >
     
-        <table  id="tabla">
+        <table id="tabla">
         <thead>
             <th>ID</th>
             <th>Periodo</th>

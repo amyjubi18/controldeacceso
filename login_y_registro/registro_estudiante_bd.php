@@ -117,8 +117,8 @@ if(file_exists($file_name)){
     
 }else{
     echo '
-    <script>
-    alert("Estudiante no registrado, intentalo nuevamente");
+    <script  src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
+    function registrar(){
     window.location = "/login_y_registro/registro.php";
     </script>
     ';

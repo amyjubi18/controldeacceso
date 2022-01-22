@@ -59,7 +59,7 @@
 	  <form action="modificar_est2.php" method="POST" style="border-collapse: separate; border-spacing: 10px 5px;" class="border p-3 form" enctype="multipart/form-data">
     <div class="mb-3">
     <label>ID</label>  
-   <b> <input class="form-control" type="text" name="id_estudiantes" value="<?php echo $_GET['id_estudiantes']?> " readonly="true" style="background-color: gray; ">
+    <input class="form-control" type="text" name="id_estudiantes" value="<?php echo $_GET['id_estudiantes']?> " readonly="true" style="background-color: gray; ">
     </div>		
     <div class="mb-3">
    <label>Periodo </label>
@@ -79,21 +79,7 @@
     </div>
     <div class="mb-3">
           <label>Codigo de la carrera </label>
-          <select class="form-select" name="cod_carrera" id="cod_carrera" required >
-                    <option value="<?php echo $consultas[4] ?>"><?php echo $consulta[4] ?></option>
-                <?php
-                include("conexion.php");
-                $consulta = "SELECT * FROM carrera";
-                
-                $ejecutar = mysqli_query($conexion, $consulta);
-                while($row = mysqli_fetch_array($ejecutar)){
-                    $cod_carrera = $row['cod_carrera'];
-                    $carreras =$row['carreras'];
-                   echo "<option value = '".$cod_carrera."' >".$cod_carrera." ".$carreras."</option>";
-
-                }
-                ?>
-                </select> 
+          <input class="form-control" type="text" id="cod_carrera" name="cod_carrera" value="<?php echo $consulta[4] ?>" readonly="true" style="background-color: gray;">
     </div>
   		
   		<br>

@@ -75,23 +75,36 @@
     
 }
 
-#tabla th{
+#tabla tbody{
     text-align: center;
     font-size: 18px;
-    padding: 10px 5px 10px 5px;
     justify-content: center;
     align-items: center;
-    white-space: pre-line;
-    text-decoration: underline;
     text-shadow: black;
+    padding: 15px;
 }
 #tabla td{
     text-align: center;
+    padding: 10px;
 }
-br{
-    display: none;
+.contener_opcion{
+    justify-content: center;
 }
-.todo{
-    
-    white-space: pre-line;
+.contener_opcion a{
+    display: flex;
+}
+#boton_modificar{
+    background-color: green;
+    color: white;
+    padding: 10px;
+    display: flexbox;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+#boton_eliminar{
+    background-color: red;
+    color: white;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
 }

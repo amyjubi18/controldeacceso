@@ -73,7 +73,7 @@
             <div class="container-fluid h-100">
             <div class="row w-100 align-items-center">
                 <br>
-  <button type="submit" class="btn btn-primary regular-button" value="Registrar" name="sub" id="sub">Registar</button>
+  <button type="submit" class="btn btn-primary regular-button" value="Registrar" name="sub" id="sub" onclick="registrar()">Registar</button>
 
 </div>          
             </div>
