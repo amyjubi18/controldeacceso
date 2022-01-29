@@ -14,7 +14,7 @@
 .menu{
     background-color: rgb(3, 3, 114);
     padding: 0.5rem;
-    width: 35%; 
+    width: 50%; 
     border-radius: 0px 5px 10px 5px;
     display: flex;
     position: relative;
@@ -27,12 +27,13 @@
     cursor: pointer;
     text-align: center;
     text-decoration: none;
+    
 }
 .menu a:hover{
     background-color: white;
     color: blue;
     border-radius: 10px;
-    transition: ease-in-out 300ms;
+    transition:ease-in-out 450ms;
 }
 .contenedor_buscar{
     margin-top: 30px;
@@ -55,13 +56,13 @@
     font-weight: 600;
     cursor: pointer;
     outline: none;
-    transition:ease-in-out 4.5ms;
+    
 }
 #boton_buscar:hover{
     background-color: white;
     color: blue;
     border: 2px blue solid;
-} 
+    transition: cubic-bezier(0.4, 0, 0.2, 1) 500ms;} 
 #tabla{
     background-color: white;
     padding: 20px;
@@ -100,6 +101,7 @@
     display: flexbox;
     margin-top: 5px;
     border-radius: 5px;
+    transition:ease-in-out 450ms;
 }
 #boton_eliminar{
     background-color: red;
@@ -107,4 +109,5 @@
     padding: 10px;
     margin-top: 5px;
     border-radius: 5px;
+    transition:ease-in-out 450ms;
 }

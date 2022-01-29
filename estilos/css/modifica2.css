@@ -14,7 +14,7 @@
 .menu{
     background-color: rgb(3, 3, 114);
     padding: 0.5rem;
-    width: 35%; 
+    width: 50%; 
     border-radius: 0px 5px 10px 5px;
     display: flex;
     position: relative;
@@ -36,7 +36,7 @@
 }
 h1{
     text-align: center;
-    font-size: 50px;
+    font-size: 27px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     text-decoration:underline;

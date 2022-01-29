@@ -15,6 +15,7 @@
         <a href="../qr/lector_qr.php">Acceso</a>
         <a href="../login_y_registro/registro.php">Registrar</a>
         <a href="../login_y_registro/modificar.php">Listado</a>
+        <a href="../login_y_registro/login.php" id="cerrar_sesion">Cerrar Sesión</a>
     </div>
     <main>
         <div class="container">

@@ -14,7 +14,7 @@
 .menu{
     background-color: rgb(3, 3, 114);
     padding: 0.5rem;
-    width: 35%; 
+    width: 50%; 
     border-radius: 0px 5px 10px 5px;
     display: flex;
     position: relative;
@@ -40,6 +40,7 @@ h1{
     font-weight: bold;
     color: rgb(4, 4, 78);
     text-decoration: underline;
+        font-size: 27px;
 }
 .row{
    display: flex;
@@ -49,7 +50,7 @@ h1{
     background-color: white;
     width: 418px;
     border-radius: 10px;
-    margin-left: -137px;
+    margin-left: -160px;
 }
 .table{
     text-align: center;
@@ -57,8 +58,11 @@ h1{
     
 }
 .titulo{
-    font-size: 25px;
+    font-size: 28px;
     text-align: center;
+    margin-left: 50px;
+    font-weight: bold;
+    margin-top: 15px;
 }
 #vista{
     margin-left: 15px;
@@ -69,4 +73,30 @@ h1{
     min-height: 1px;
     padding-right: -27px;
     padding-left: 25px;
+}
+.abs-center {
+    justify-content: center;
+    align-items: center;
+    margin-left: 372px;
+    margin-top: 31px;
+    margin-bottom: 31px;
+}
+#eliminar{
+    margin-left: 50px;
+    padding-top: 12px;
+    width: 21%;
+    padding-bottom: 12px;
+    font-size: 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition:ease-in-out 450ms;
+}
+
+.form-control[readonly]{
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    color: white;
+    background-color: rgb(3, 3, 114);
+    border-radius: 8px;
 }

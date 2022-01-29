@@ -13,6 +13,7 @@
         <a href="../qr/lector_qr.php">Acceso</a>
         <a href="../login_y_registro/registro.php">Registrar</a>
         <a href="../login_y_registro/modificar.php">Listado</a>
+        <a href="../login_y_registro/login.php" id="cerrar_sesion">Cerrar Sesión</a>
     </div>
     <div class="contenedor_buscar">
         <form action="buscar.php" method="post">
@@ -25,13 +26,13 @@
         <table border = "2" id="tabla">
             
             <tr>
-            <td>ID</td>
-            <td>Periodo</td>
-            <td>Nombres del Estudiante</td>
-            <td>Apellidos del Estudiante</td>
-            <td>Cedula del Estudiante</td>
-            <td>Codigo de la Carrera</td>
-            <td>Opcion</td>
+            <td><b>ID</b></td>
+            <td><b>Periodo</b></td>
+            <td><b>Nombres</b></td>
+            <td><b>Apellidos</b></td>
+            <td><b>Cédula</b></td>
+            <td><b>Código</b></td>
+            <td><b>Opción</b></td>
             </tr>
             
             <?php
@@ -48,6 +49,7 @@
                         <td><?php echo $mostrar[3] ?></td>
                         <td><?php echo $mostrar[4] ?></td>
                         <td><?php echo $mostrar[5] ?></td>
+                        
     
                         <td>
                             <div class="contener_opcion">

@@ -14,7 +14,7 @@
 .menu{
     background-color: rgb(3, 3, 114);
     padding: 0.5rem;
-    width: 35%; 
+    width: 50%; 
     border-radius: 0px 5px 10px 5px;
     display: flex;
     position: relative;
@@ -90,26 +90,7 @@ main{
     border: 2px solid rgb(79, 80, 182);
 
 }
-/* .contenedor_2 form button{
-    padding: 15px 40px;
-    border-radius: 20px;
-    background-color: blue;
-    color: white;
-    margin-top: 40px;
-    border: none;
-    font-size: 20px;
-    font-weight: 600;
-    cursor: pointer;
-    outline: none;
-    margin-left: 150px;
-    transition:ease-in-out 450ms;
 
-}
-.contenedor_2 form button:hover{
-    background-color: transparent;
-    color: blue;
-    border: 2px solid blue;
-} */
 .container form select{
     margin-top: 10px;
     padding: 10px;
@@ -133,12 +114,12 @@ main{
     font-weight: 600;
     cursor: pointer;
     outline: none;
-    transition:ease-in-out 4.5ms;
 }
 #sub:hover{
     background-color: transparent;
     color: blue;
     border: 2px blue solid;
+    transition: cubic-bezier(0.4, 0, 0.2, 1) 500ms;
 } 
 
 /*responsive*/

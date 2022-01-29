@@ -14,7 +14,7 @@
 .menu{
     background-color: rgb(3, 3, 114);
     padding: 0.5rem;
-    width: 35%; 
+    width: 50%; 
     border-radius: 0px 5px 10px 5px;
     display: flex;
     position: relative;
@@ -38,6 +38,15 @@
     margin-top: 30px;
     justify-content: center;
     display: flex;
+}
+h1{
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-weight: bold;
+    color: rgb(4, 4, 78);
+    text-decoration: underline;
+    font-size: 27px;
+    margin-top: 29px;
 }
 #buscar{
     height: 43px;
@@ -64,14 +73,15 @@
 } 
 #tabla{
     background-color: white;
-    padding: 20px;
+    padding: 12px;
     border-radius: 10px;
     margin-bottom: 30px;
     border-collapse: unset;
     border-spacing: 1px;
     border: 3px solid blue;
-    width: 90%;
-    margin-left: 50px;
+    width: 98%;
+    margin-left: 12px;
+    margin-top: -64px;
     
 }
 
@@ -95,3 +105,4 @@ br{
     
     white-space: pre-line;
 }
+

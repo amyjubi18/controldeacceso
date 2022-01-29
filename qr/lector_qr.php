@@ -19,6 +19,7 @@
         <a href="../qr/lector_qr.php">Acceso</a>
         <a href="../login_y_registro/registro.php">Registrar</a>
         <a href="../login_y_registro/modificar.php">Listado</a>
+        <a href="../login_y_registro/login.php" id="cerrar_sesion">Cerrar Sesión</a>
     </div>
     <div class="contenedor">
     <h1>CONTROL DE ACCCESO DE ESTUDIANTES</h1>
@@ -32,7 +33,7 @@
             </div>
             <div class="col-md-6" id="contenedor_form">
                 <form action="insertar.php" method="POST" class="form-horizontal">
-                <label class="titulo"> LECTOR DE CÓDIGO QR</label>
+                <label class="titulo" > LECTOR DE CÓDIGO QR</label>
                 <input type="text" name="cedula_est" id="cedula_est" readonly="true" placeholder="Datos del QR" class="form-control">
                 </form>
                 <br>
@@ -47,7 +48,7 @@
                     <?php
 
                         include ("../login_y_registro/conexion.php");
-                        $query = "SELECT cedula_est, fecha_hora FROM entrada WHERE DATE(fecha_hora)=CURDATE()";
+                        $query = "SELECT cedula_est, fecha_hora FROM entradas WHERE DATE(fecha_hora)=CURDATE()";
                         $ejecutar = mysqli_query($conexion, $query);
                         while($row = mysqli_fetch_assoc($ejecutar)){   
                     ?>
@@ -61,6 +62,9 @@
                 </tbody>
                 </table>
             </div>
+        </div>
+        <div class="abs-center">
+        <a href="eliminar2.php"> <buttom type= 'buttom' class='btn btn-danger' id="eliminar"> Eliminar </buttom> </a> 
         </div>
     </div>
 

@@ -16,9 +16,11 @@
         <a href="../qr/lector_qr.php">Acceso</a>
         <a href="../login_y_registro/registro.php">Registrar</a>
         <a href="../login_y_registro/modificar.php">Listado</a>
+        <a href="../login_y_registro/login.php" id="cerrar_sesion">Cerrar Sesión</a>
         <br>
         <br>
 </div>
+<h1>Listado de estudiantes</h1>
 <div class="contenedor_buscar">
         <form action="buscar.php" method= "post";>
         <input type="text" name="buscar" id= "buscar"> 
@@ -32,17 +34,18 @@
         <thead>
             <th>ID</th>
             <th>Periodo</th>
-            <th>Nombres del Estudiante</th>
-            <th>Apellidos del Estudiante</th>
-            <th>Cedula del Estudiante</th>
-            <th>Codigo de la Carrera</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Cédula</th>
+            <th>Codigo</th>
+            <th>Carrera</th>
             <th>Opción</th>
         </thead>
 
 <?php
 include "conexion.php";
 
-$consultar = "SELECT * FROM estudiantes  order by id_estudiantes ";
+$consultar = "SELECT estudiantes.id_estudiantes, estudiantes.periodo_id, estudiantes.nombre_est, estudiantes.apellido_est, estudiantes.cedula_est, estudiantes.cod_carrera, carrera.carreras  FROM estudiantes, carrera WHERE estudiantes.cod_carrera = carrera.cod_carrera  order by id_estudiantes ";
 $resultado = mysqli_query($conexion, $consultar) or die (mysqli_error($conexion));
 
 
@@ -56,8 +59,9 @@ while($filas= $resultado->fetch_assoc())
         echo "<td>"; echo $filas ['apellido_est']; echo "</td>"; echo "<br>";
         echo "<td>"; echo $filas ['cedula_est']; echo "</td>"; echo "<br>";
         echo "<td>"; echo $filas ['cod_carrera']; echo "</td>"; echo "<br>";
+        echo "<td>"; echo $filas ['carreras']; echo "</td>"; echo "<br>";
         echo "<td> <a href='modificar_est.php?id_estudiantes=".$filas['id_estudiantes']."'> <buttom type= 'buttom' class='btn btn-success'> Modificar </buttom> </a> </td>";
-        echo "<td> <a href='eliminar1.php'> <buttom type= 'buttom' class='btn btn-danger'> Eliminar </buttom> </a> </td>";
+        echo "<td> <a href='eliminar1.php?id_estudiantes=".$filas['id_estudiantes']."'> <buttom type= 'buttom' class='btn btn-danger'> Eliminar </buttom> </a> </td>";
     echo "</tbody>";
         echo "</tr>";
 }
