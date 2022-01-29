@@ -30,7 +30,7 @@
 }
 .menu a:hover{
     background-color: white;
-    color: blue;
+    color: rgb(3, 3, 114);
     border-radius: 10px;
     transition: ease-in-out 300ms;
 }
@@ -59,7 +59,7 @@ h1{
 #boton_buscar{
     padding: 5px 30px;
     border-radius: 20px;
-    background-color: blue;
+    background-color: rgb(3, 3, 114);
     color: white;
     justify-content: center;
     border: none;
@@ -71,8 +71,8 @@ h1{
 }
 #boton_buscar:hover{
     background-color: white;
-    color: blue;
-    border: 2px blue solid;
+    color: rgb(3, 3, 114);
+    border: 2px rgb(3, 3, 114) solid;
     transition: cubic-bezier(0.4, 0, 0.2, 1) 500ms;
 
 } 
@@ -82,9 +82,9 @@ h1{
     border-radius: 10px;
     margin-bottom: 30px;
     border-spacing: 1px;
-    border: 3px solid blue;
+    border: 6px solid rgb(3, 3, 114);
     width: 98%;
-    margin-left: 12px;
+    margin-left: 9px;
     margin-top: -64px;
     
 }
@@ -98,7 +98,7 @@ h1{
     white-space: pre-line;
     text-shadow: black;
     border-style: solid;
-    border-color: blue;
+    border-color: rgb(3, 3, 114);
     border-width: 2px;
     width: 50%;
     background-color: #beccf3;
@@ -106,7 +106,7 @@ h1{
 #tabla td {
     text-align: center;
     padding: 8px;
-    border-color: blue;
+    border-color: rgb(3, 3, 114);
     border-style: solid;
     border-width: 2px;
 }
@@ -121,13 +121,13 @@ br{
     justify-content: center;
 }
 #tabla tr {
-    border-color: blue;
+    border-color: rgb(3, 3, 114);
     border-width: 2px;
     width: 17%;
     
 }
 #tabla thead {
-    border-color: blue;
+    border-color: rgb(3, 3, 114);
     border-style: solid;
     border-width: 2px;
 }

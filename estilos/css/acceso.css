@@ -30,7 +30,7 @@
 }
 .menu a:hover{
     background-color: white;
-    color: blue;
+    color: rgb(3, 3, 114);
     border-radius: 10px;
     transition: ease-in-out 300ms;
 }
@@ -55,7 +55,14 @@ h1{
 .table{
     text-align: center;
     font-size: 15px;
+    border: solid 2px rgb(3, 3, 114);
     
+}
+.table>thead:first-child>tr:first-child>td{
+    border: solid 2px rgb(3, 3, 114);
+}
+.table-bordered>tbody>tr>td{
+    border: solid 2px rgb(3, 3, 114);
 }
 .titulo{
     font-size: 28px;

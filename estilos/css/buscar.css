@@ -31,7 +31,7 @@
 }
 .menu a:hover{
     background-color: white;
-    color: blue;
+    color: rgb(3, 3, 114);
     border-radius: 10px;
     transition:ease-in-out 450ms;
 }
@@ -50,7 +50,7 @@
 #boton_buscar{
     padding: 5px 30px;
     border-radius: 20px;
-    background-color: blue;
+    background-color: rgb(3, 3, 114);
     color: white;
     justify-content: center;
     border: none;
@@ -62,8 +62,8 @@
 }
 #boton_buscar:hover{
     background-color: white;
-    color: blue;
-    border: 2px blue solid;
+    color: rgb(3, 3, 114)lue;
+    border: 2px rgb(3, 3, 114) solid;
     transition: cubic-bezier(0.4, 0, 0.2, 1) 500ms;
 
 } 
@@ -74,7 +74,7 @@
     margin-bottom: 30px;
     border-collapse: unset;
     border-spacing: 1px;
-    border: 3px solid blue;
+    border: 3px solid rgb(3, 3, 114);
     width: 95%;
     margin-left: 22px;
 
@@ -92,7 +92,7 @@
 #tabla td{
     text-align: center;
     padding: 10px;
-    border: solid 2px blue;
+    border: solid 2px rgb(3, 3, 114);
 }
 .contener_opcion{
     justify-content: center;

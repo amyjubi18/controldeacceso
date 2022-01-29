@@ -83,9 +83,10 @@ main{
     background-color: white;
     position: absolute;
     border-radius: 20px;
+    margin-top: 48px;
 }
 .contenedor_2 form h2{
-    color: blue;
+    color: rgb(3, 3, 114);
     font-size: 40px;
     text-align: center;
     margin-bottom: 20px;
@@ -102,7 +103,7 @@ main{
 .contenedor_2 form button{
     padding: 15px 40px;
     border-radius: 20px;
-    background-color: blue;
+    background-color: rgb(3, 3, 114);
     color: white;
     margin-top: 40px;
     border: none;
@@ -116,8 +117,8 @@ main{
 }
 .contenedor_2 form button:hover{
     background-color: transparent;
-    color: blue;
-    border: 2px solid blue;
+    color: rgb(3, 3, 114);
+    border: 2px solid rgb(3, 3, 114);
 }
 .formulario-login{
     transition:ease-in-out 300ms;

@@ -30,7 +30,7 @@
 }
 .menu a:hover{
     background-color: white;
-    color: blue;
+    color: rgb(3, 3, 114);
     border-radius: 10px;
     transition: ease-in-out 300ms;
 }
@@ -72,7 +72,7 @@ h1{
     font-size: 50px;
     text-align: center;
     margin-bottom: 20px;
-    color: blue;
+    color: rgb(3, 3, 114);
 
 }
 .container form input{
@@ -106,36 +106,39 @@ h1{
 #boton_guardar{
     padding: 10px 30px;
     border-radius: 20px 0px 0px 20px;
-    background-color: blue;
+    background-color: brgb(3, 3, 114)lue;
     color: white;
     justify-content: center;
     border: none;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
     cursor: pointer;
     outline: none;
     transition:ease-in-out 4.5ms;
+    height: 48px;
 }
 #boton_guardar:hover{
     background-color: transparent;
-    color: blue;
-    border: 2px blue solid;
+    color: rgb(3, 3, 114);
+    border: 2px rgb(3, 3, 114) solid;
 } 
 #boton_regresar{
     padding: 10.5px 30px;
     border-radius: 0px 20px 20px 0px;
     background-color: white;
-    color: blue;
+    color: rgb(3, 3, 114);
     justify-content: center;
-    border: 2px solid blue;
-    font-size: 20px;
+    border: 2px solid rgb(3, 3, 114);
+    font-size: 15px;
     font-weight: 600;
     cursor: pointer;
     outline: none;
     transition:ease-in-out 4.5ms;
     text-decoration: none;
+    height: 48px;
+
 }
 #boton_regresar:hover{
-    background-color: blue;
+    background-color: rgb(3, 3, 114);
     color: white;
 } 
