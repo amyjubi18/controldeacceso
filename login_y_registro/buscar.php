@@ -28,11 +28,11 @@
             <tr>
             <td><b>ID</b></td>
             <td><b>Periodo</b></td>
-            <td><b>Nombres</b></td>
-            <td><b>Apellidos</b></td>
-            <td><b>Cédula</b></td>
-            <td><b>Código</b></td>
-            <td><b>Opción</b></td>
+            <td><b>Nombres del Estudiante</b></td>
+            <td><b>Apellidos del Estudiante</b></td>
+            <td><b>Cedula del Estudiante</b></td>
+            <td><b>Codigo de la Carrera</b></td>
+            <td colspan="2"><b>Opción</b></td>
             </tr>
             
             <?php
@@ -49,7 +49,6 @@
                         <td><?php echo $mostrar[3] ?></td>
                         <td><?php echo $mostrar[4] ?></td>
                         <td><?php echo $mostrar[5] ?></td>
-                        
     
                         <td>
                             <div class="contener_opcion">

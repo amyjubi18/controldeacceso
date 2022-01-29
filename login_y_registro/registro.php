@@ -49,12 +49,12 @@
   </div>
   <div class="mb-3">
     <label for="cedula_est" class="form-label" name="cedula_est" id="cedula_est">Cédula</label>
-    <input type="text" class="form-control" id="cedula_est" name="cedula_est" required minlength="6" maxlength="10">
+    <input type="text" class="form-control" id="cedula_est" name="cedula_est" required minlength="6" maxlength="8">
   </div>
             <div class="mb-3">
 
             <label for="carrera" class="form-label"> Carrera</label>
-                <select class="form-select" name="cod_carrera" id="cod_carrera" required >
+                <select class="form-select" name="cod_carrera" id="cod_carrera" >
                     <option value="0">Seleccione la Carrera</option>
                 <?php
                 include("conexion.php");

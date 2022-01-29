@@ -9,13 +9,6 @@ $nombre_est = $_POST['nombre_est'];
 $apellido_est = $_POST['apellido_est'];
 $cedula_est = $_POST['cedula_est'];
 $cod_carrera = $_POST['cod_carrera'];
-
-// $generar =  QRcode::png($cedula_est,"codigo/qr_".$cedula_est.".png",'L',10,5);
-/* $dir= 'codigo/qr_".$cedula_est."';
-if(!file_exists($dir))
-mkdir ($dir); */
-// var_dump($generar);
-
 $query = "INSERT INTO estudiantes (periodo_id, nombre_est, apellido_est, cedula_est, cod_carrera)
 VALUES('$periodo_id', '$nombre_est', '$apellido_est', '$cedula_est', '$cod_carrera')";
 
@@ -28,8 +21,6 @@ if(mysqli_num_rows($verificar_cedula) > 0){
     window.location = "/login_y_registro/registro.php";
     </script>
     ';
-    /* $Menssage[] = "Esta cédula ya esta registrada";
-    header("refresh:3; registro.php"); */
      exit();
 }
 $ejecutar = mysqli_query($conexion, $query);
@@ -43,27 +34,8 @@ if($ejecutar){
      QRcode::png($cedula_est,$file,'L',5,5 );
      
  }
- if(isset($_GET['image'])){
-     $file_name= $_GET['image'];
-
-if(file_exists($file_name)){
-    header('Content-Description: File Transfer');
-    header('Content-Type: aplication/image');
-    header('Content-Disposition: attachment; filename="'.basename($file_name).'"');
-    header('Content-Length:'.filesize($file_name));
-    readfile($file_name);
-}
- }    
- if(isset($_GET['image'])){
-  $file_name= $_GET['image'];
-      if(file_exists($file_name)){
-          header('Content-Description: File Transfer');
-          header('Content-Type: aplication/image');
-          header('Content-Disposition: attachment; filename="'.basename($file_name).'"');
-          header('Content-Length:'.filesize($file_name));
-          readfile($file_name);
-      }
-  }
+   
+ 
   if(!empty($file)){
       ?>
 <html lang="es">

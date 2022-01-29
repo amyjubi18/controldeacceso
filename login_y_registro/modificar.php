@@ -37,9 +37,9 @@
             <th>Nombres</th>
             <th>Apellidos</th>
             <th>Cédula</th>
-            <th>Codigo</th>
+            <th>Código</th>
             <th>Carrera</th>
-            <th>Opción</th>
+            <th colspan="2">Opción</th>
         </thead>
 
 <?php

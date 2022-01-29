@@ -7,7 +7,7 @@
     include 'conexion.php';
     
 
-    $sentencia="SELECT id_estudiantes, periodo_id, nombre_est, apellido_est, cedula_est, cod_carrera FROM estudiantes WHERE id_estudiantes='".$id_est."' ";
+    $sentencia="SELECT DISTINCT estudiantes.id_estudiantes, estudiantes.periodo_id, estudiantes.nombre_est, estudiantes.apellido_est, estudiantes.cedula_est, estudiantes.cod_carrera, carrera.carreras FROM estudiantes, carrera WHERE (estudiantes.cod_carrera= carrera.cod_carrera) AND (id_estudiantes='".$id_est."')  ";
     $resultado=  mysqli_query($conexion, $sentencia) or die ("Error al consultar datos".mysqli_error($conexion));
     $filas= mysqli_fetch_assoc($resultado);
     return [
@@ -18,6 +18,7 @@
       $filas['cod_carrera'],
       $filas['carreras']
     ];
+
   }
  
 ?>
@@ -69,9 +70,24 @@
   		<input class="form-control" type="text" id="cedula_est" name="cedula_est" value="<?php echo $consulta[3] ?>">
     </div>
     <div class="mb-3">
-          <label>Codigo de la Carrera </label>
-          <input class="form-control" type="text" id="cod_carrera" name="cod_carrera" value="<?php echo $consulta[4]; ?>" readonly="true" style="background-color: gray;">
+          <label>Carrera </label>
+    <select class="form-select" name="cod_carrera" id="cod_carrera">
+    <option value="<?php echo $consulta[4], " ",$consulta[5]; ?>"><?php echo $consulta[4], " ",$consulta[5]; ?></option>    
+    <?php
+                include("conexion.php");
+                $consulta = "SELECT * FROM carrera";
+                
+                $ejecutar = mysqli_query($conexion, $consulta);
+                while($row = mysqli_fetch_array($ejecutar)){
+                    $cod_carrera = $row['cod_carrera'];
+                    $carreras =$row['carreras'];
+                   echo "<option value = '".$cod_carrera."' >".$cod_carrera." ".$carreras."</option>";
+
+                }
+                ?> 
+</select>       
     </div>
+    
   		<br>
       <div class="botones">
   		<button type="submit" class="btn btn-success" id="boton_guardar">Guardar</button>
