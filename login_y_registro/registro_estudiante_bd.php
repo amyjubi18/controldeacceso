@@ -65,6 +65,13 @@ if($ejecutar){
 </div>
 <img src="/estilos/img/usuario.png" id="usuario">
 <div class="datos">
+<?php
+$query= mysql_query("SELECT @@identity AS id_estudiantes");
+ if ($row = mysql_fetch_row($query)) 
+ {
+   $id = trim($row[0]);
+ }
+?>
 <h6><b>Periodo: </b><?php echo $periodo_id; ?></h6>
 <h6><b>Nombre: </b><?php echo $nombre_est; ?></h6>
   <h6><b>Apellido: </b><?php echo $apellido_est; ?></h6>
