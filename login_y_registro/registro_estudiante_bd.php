@@ -1,7 +1,5 @@
 <?php
 
-use PHPMailer\PHPMailer\PHPMailer;
-
 include 'conexion.php';
 // require ('/phpqrcode/qrlib.php');
 $periodo_id = $_POST['periodo_id'];
