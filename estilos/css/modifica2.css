@@ -106,7 +106,7 @@ h1{
 #boton_guardar{
     padding: 10px 30px;
     border-radius: 20px 0px 0px 20px;
-    background-color: brgb(3, 3, 114)lue;
+    background-color: rgb(3, 3, 114);
     color: white;
     justify-content: center;
     border: none;

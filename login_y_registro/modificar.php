@@ -62,6 +62,7 @@ while($filas= $resultado->fetch_assoc())
         echo "<td>"; echo $filas ['carreras']; echo "</td>"; echo "<br>";
         echo "<td> <a href='modificar_est.php?id_estudiantes=".$filas['id_estudiantes']."'> <buttom type= 'buttom' class='btn btn-success'> Modificar </buttom> </a> </td>";
         echo "<td> <a href='eliminar1.php?id_estudiantes=".$filas['id_estudiantes']."'> <buttom type= 'buttom' class='btn btn-danger'> Eliminar </buttom> </a> </td>";
+        
     echo "</tbody>";
         echo "</tr>";
 }
