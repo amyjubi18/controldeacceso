@@ -23,7 +23,7 @@
          <form action="registro_estudiante_bd.php" method="POST" class="border p-3 form" enctype="multipart/form-data">
                 <h1>Registro</h1>
                 <div class="mb-3">
-  <label for="periodo" class="form-label">Periodo academico</label>
+  <label for="periodo" class="form-label">Período Académico</label>
                 <select class="form-select" name="periodo_id" id="periodo_id" required>
                     <option value="0">Seleccione el Periodo</option>
                 <?php
