@@ -22,7 +22,7 @@
         <a href="../login_y_registro/login.php" id="cerrar_sesion">Cerrar Sesión</a>
     </div>
     <div class="contenedor">
-    <h1>CONTROL DE ACCCESO DE ESTUDIANTES</h1>
+    <h1>CONTROL DE ACCCESO PARA ESTUDIANTES</h1>
             <br>
         <div class="row">
             <br>

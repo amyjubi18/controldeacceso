@@ -79,6 +79,13 @@ if($ejecutar){
 </body>
 </html>
 <?php
+}else{
+    echo '
+    <script>
+    alert("Campos Vacios");
+    window.location = "/login_y_registro/login.php";
+    </script>
+    ';
 }
     
 }else{

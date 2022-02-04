@@ -22,7 +22,7 @@
         </form>
     </div>
     <br>
-    <div>
+    <div id="contenedor-tab">>
         <table border = "2" id="tabla">
             
             <tr>

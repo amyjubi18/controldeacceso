@@ -8,13 +8,17 @@
 
 }
 #body{
-    background-color: rgb(150, 183, 253);
+    background-image: url(/estilos/img/fondo-carnet.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 
 }
 .menu{
     background-color: rgb(3, 3, 114);
-    padding: 0.5rem;
-    width: 50%; 
+    padding: 3px;
+    width: 44%; 
     border-radius: 0px 5px 10px 0px;
     display: flex;
     position: relative;
@@ -22,7 +26,7 @@
 } 
  .menu a{
     color: white;
-    padding: 10px;
+    padding: 6px;
     font-size: 18px;
     cursor: pointer;
     text-align: center;
@@ -46,43 +50,54 @@
 
 }
 .abs-center{
-    margin-left: 32%;
+    margin-left: 25%;
     background-color: white;
     padding: 20px;
-    width: 350px;
-    margin-top: 25px;
-    height: 614px;
+    width: 53%;
+    margin-top: 30px;
+    height: 289px;
+    border-radius: 10px;
 }
 .mem{
-    padding: 10px 50px 10px 50px;
-    margin-top: -45px;
+    padding: 9px 130px 10px 64px;
+    margin-top: -64px;
+    margin-left: 16%;
 }
 .membrete{
     text-align: center;
+    font-size: 14px;
+    font-weight: bold;
 }
 #usuario{
-    width: 42%;
-    margin-left: 86px;
-    border: 3px solid black;
+    width: 24%;
+    margin-left: 5px;
+    border: 3px solid #030372;
     margin-bottom: 20px;
+    margin-top: 10px;
+    display: inline;
+    float: left;
 }
 #qr{
-    margin-left: 54px;
-    margin-top: -3px;
-    width: 65%;
+    margin-left: 154px;
+    margin-top: -143px;
+    width: 36%;
+    display: inline;
+    float: right;
 }
 #logo1{
-    width: 24%;
-    margin-top: -27px;
+    width: 19%;
+    margin-top: -10px;
 }
 #logo2{
-    width: 17%;
-    margin-left: 171px;
+    width: 12%;
+    margin-left: 286px;
     margin-top: -12px;
 }
 
 .datos{
-    margin-left: 50px;
+    margin-left: 21px;
+    display: inline;
+    float: left;
 }
 .datos h6{
     font-size: 14px;

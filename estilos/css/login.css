@@ -8,7 +8,7 @@
 }
 
 body{
-    background-image: url(/estilos/img/UNEFA1.jpg); 
+    background-image: url(/estilos/img/fondo-login.jpg); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -28,20 +28,23 @@ main{
     position: relative;
 }
 .contenedor_1{
-    width: 100%;
+    width: 66%;
     padding: 10px 20px;
     display: flex;
     justify-content: center;
     backdrop-filter: blur(7px);
     background-color: rgba(119, 158, 202, 0.493);
     transition: lefth 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+    margin-left: 19%;
+    margin-top: 3%;
 
 }
 .caja-posterior{
-    margin: 100px 40px;
+    margin: 70px 53px;
     color: white;
     transition: all 600ms;
-    font-size: 35px;
+    font-size: 26px;
+    text-align: center;
     font-weight: bold;
     transform: rotate3d(20px 10px 10px);
     
@@ -52,34 +55,34 @@ main{
 
 }
 .caja-posterior button{
-    padding: 15px 40px;
+    padding: 15px 30px;
     border: 2px solid white;
     background-color: white;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 600;
     cursor: pointer;
-    margin-top: 40px;
+    margin-top: 26px;
     border-radius: 20px;
-    transition:ease-in-out 450ms;
-    margin-left: 175px;
+    transition: ease-in-out 450ms;
+    margin-left: 12px;
 }
 .caja-posterior button:hover{
     background-color: transparent;
     color: white;
 }
 .contenedor_2{
-    display: none;
     align-items: center;
-    width: 100%;
+    width: 50%;
     max-width: 500px;
     position:relative;
     top: 185px;
     margin-top: -40px;
     transition: right 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+    margin-left: 224px;
 }
 .contenedor_2 form{
-    width: 88%;
-    padding: 50px 20px;
+    width: 87%;
+    padding: 40px 20px;
     background-color: white;
     position: absolute;
     border-radius: 20px;
@@ -87,7 +90,7 @@ main{
 }
 .contenedor_2 form h2{
     color: rgb(3, 3, 114);
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -105,13 +108,13 @@ main{
     border-radius: 20px;
     background-color: rgb(3, 3, 114);
     color: white;
-    margin-top: 40px;
+    margin-top: 30px;
     border: none;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     outline: none;
-    margin-left: 120px;
+    margin-left: 27%;
     transition:ease-in-out 450ms;
 
 }

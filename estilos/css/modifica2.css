@@ -8,13 +8,17 @@
 
 }
 #body{
-    background-color: rgb(150, 183, 253);
+    background-image: url(/estilos/img/fondo-modificar.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: initial;
+    background-attachment: fixed;
 
 }
 .menu{
     background-color: rgb(3, 3, 114);
-    padding: 0.5rem;
-    width: 50%; 
+    padding: 3px;
+    width: 44%;
     border-radius: 0px 5px 10px 0px;
     display: flex;
     position: relative;
@@ -22,7 +26,7 @@
 } 
  .menu a{
     color: white;
-    padding: 10px;
+    padding: 6px;
     font-size: 18px;
     cursor: pointer;
     text-align: center;
@@ -36,11 +40,11 @@
 }
 h1{
     text-align: center;
-    font-size: 27px;
+    font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
-    text-decoration:underline;
-    color: rgb(17, 17, 75);
+    color: white;
+    margin-top: -21px;
 }
 
 .container{
@@ -60,7 +64,7 @@ h1{
     
 }
 .container form{
-    width:  450px; 
+    width:  410px; 
     text-align: left;
     justify-content: center;
     background-color: white;

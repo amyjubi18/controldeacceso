@@ -20,7 +20,7 @@
         <br>
         <br>
 </div>
-<h1>Listado de estudiantes</h1>
+<h1>Listado de Estudiantes</h1>
 <div class="contenedor_buscar">
         <form action="buscar.php" method= "post";>
         <input type="text" name="buscar" id= "buscar"> 
