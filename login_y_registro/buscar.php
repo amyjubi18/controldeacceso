@@ -27,7 +27,6 @@
             
             <tr>
             <td><b>ID</b></td>
-            <td><b>Periodo</b></td>
             <td><b>Nombres del Estudiante</b></td>
             <td><b>Apellidos del Estudiante</b></td>
             <td><b>Cedula del Estudiante</b></td>
@@ -38,7 +37,7 @@
             <?php
                 $buscar = $_POST['buscar'];
                 include("conexion.php");
-                $sql = "SELECT id_estudiantes, periodo_id, nombre_est, apellido_est, cedula_est, cod_carrera  FROM estudiantes WHERE cedula_est like '$buscar' '%' order by id_estudiantes desc";
+                $sql = "SELECT id_estudiantes, nombre_est, apellido_est, cedula_est, cod_carrera  FROM estudiantes WHERE cedula_est like '$buscar' '%' order by id_estudiantes desc";
                 $rta = mysqli_query($conexion, $sql);
                 while ($mostrar = mysqli_fetch_row($rta)) {
                     ?>
@@ -48,7 +47,7 @@
                         <td><?php echo $mostrar[2] ?></td>
                         <td><?php echo $mostrar[3] ?></td>
                         <td><?php echo $mostrar[4] ?></td>
-                        <td><?php echo $mostrar[5] ?></td>
+                       
     
                         <td>
                             <div class="contener_opcion">
@@ -57,8 +56,7 @@
                             periodo_id=<?php echo $mostrar[1] ?> &
                             nombre_est=<?php echo $mostrar[2] ?> &
                             apellido_est=<?php echo $mostrar[3] ?> &
-                            cedula_est=<?php echo $mostrar[4] ?> &
-                            cod_carrera=<?php echo $mostrar[5] ?>
+                            cedula_est=<?php echo $mostrar[4] ?> 
                             " id="boton_modificar">Modificar</a>
                             <a href="eliminar1.php? id_estudiantes=<?php echo $mostrar[0] ?>" id="boton_eliminar">Eliminar</a>
                             </div>

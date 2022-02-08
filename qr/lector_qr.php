@@ -55,17 +55,24 @@
                         <tr>
                             <td><?php echo $row['cedula_est']; ?></td>
                             <td><?php echo $row['fecha_hora']; ?></td>
+                            
+                            
                         </tr>
                     <?php
                     }
                     ?>
                 </tbody>
                 </table>
-            </div>
-        </div>
-        <div class="abs-center">
+                <div class="abs-center">
+        <a href="/login_y_registro/generar_reporte.php"> <buttom type= 'buttom' class='btn btn-success' id="imprimir"> Imprimir Reporte </buttom> </a> 
         <a href="eliminar2.php"> <buttom type= 'buttom' class='btn btn-danger' id="eliminar"> Eliminar </buttom> </a> 
         </div>
+            </div>
+        </div>
+        <!-- <div class="abs-center">
+        <a href="/login_y_registro/generar_reporte.php"> <buttom type= 'buttom' class='btn btn-success' id="imprimir"> Imprimir Reporte </buttom> </a> 
+        <a href="eliminar2.php"> <buttom type= 'buttom' class='btn btn-danger' id="eliminar"> Eliminar </buttom> </a> 
+        </div> -->
     </div>
 
     <script>

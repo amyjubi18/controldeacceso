@@ -33,7 +33,7 @@
         <table id="tabla">
         <thead>
             <th>ID</th>
-            <th>Periodo</th>
+            <th colspan="3">Periodo</th>
             <th>Nombres</th>
             <th>Apellidos</th>
             <th>Cédula</th>
@@ -45,7 +45,7 @@
 <?php
 include "conexion.php";
 
-$consultar = "SELECT estudiantes.id_estudiantes, estudiantes.periodo_id, estudiantes.nombre_est, estudiantes.apellido_est, estudiantes.cedula_est, estudiantes.cod_carrera, carrera.carreras  FROM estudiantes, carrera WHERE estudiantes.cod_carrera = carrera.cod_carrera  order by id_estudiantes ";
+$consultar = "SELECT estudiantes.id_estudiantes, periodo.tiempo, periodo.periodo, periodo.turno, estudiantes.nombre_est, estudiantes.apellido_est, estudiantes.cedula_est, estudiantes.cod_carrera, carrera.carreras  FROM estudiantes, carrera, periodo WHERE (estudiantes.cod_carrera = carrera.cod_carrera) AND (estudiantes.periodo_id=periodo.periodo_id)  order by id_estudiantes ";
 $resultado = mysqli_query($conexion, $consultar) or die (mysqli_error($conexion));
 
 
@@ -54,7 +54,9 @@ while($filas= $resultado->fetch_assoc())
     echo "<tr>";
     echo "<tbody>";
         echo "<td>"; echo "<b>"; echo $filas ['id_estudiantes']; echo"</b>"; echo "</td>"; echo "<br>";
-        echo "<td>"; echo $filas ['periodo_id']; echo "</td>"; echo "<br>";
+        echo "<td>"; echo $filas ['tiempo']; echo "</td>"; echo "<br>";
+        echo "<td>"; echo $filas ['periodo']; echo "</td>"; echo "<br>";
+        echo "<td>"; echo $filas ['turno']; echo "</td>"; echo "<br>";
         echo "<td>"; echo $filas ['nombre_est']; echo "</td>"; echo "<br>";
         echo "<td>"; echo $filas ['apellido_est']; echo "</td>"; echo "<br>";
         echo "<td>"; echo $filas ['cedula_est']; echo "</td>"; echo "<br>";

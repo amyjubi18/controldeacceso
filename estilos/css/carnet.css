@@ -79,8 +79,8 @@
 }
 #qr{
     margin-left: 154px;
-    margin-top: -143px;
-    width: 36%;
+    margin-top: -135px;
+    width: 34%;
     display: inline;
     float: right;
 }
@@ -98,7 +98,15 @@
     margin-left: 21px;
     display: inline;
     float: left;
+    margin-top: 21px;
 }
 .datos h6{
     font-size: 14px;
+}
+hr {
+    color: inherit;
+    background-color: currentColor;
+    border: 2px solid blue;
+    width: 99%;
+    margin-top: -16px;
 }

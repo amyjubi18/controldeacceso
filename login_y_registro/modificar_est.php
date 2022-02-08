@@ -7,11 +7,13 @@
     include 'conexion.php';
     
 
-    $sentencia="SELECT DISTINCT estudiantes.id_estudiantes, estudiantes.periodo_id, estudiantes.nombre_est, estudiantes.apellido_est, estudiantes.cedula_est, estudiantes.cod_carrera, carrera.carreras FROM estudiantes, carrera WHERE (estudiantes.cod_carrera= carrera.cod_carrera) AND (id_estudiantes='".$id_est."')  ";
+    $sentencia="SELECT DISTINCT estudiantes.id_estudiantes, periodo.tiempo, periodo.periodo, periodo.turno, estudiantes.nombre_est, estudiantes.apellido_est, estudiantes.cedula_est, estudiantes.cod_carrera, carrera.carreras FROM estudiantes, carrera, periodo WHERE (estudiantes.cod_carrera= carrera.cod_carrera) AND (estudiantes.periodo_id=periodo.periodo_id) AND (id_estudiantes='".$id_est."')  ";
     $resultado=  mysqli_query($conexion, $sentencia) or die ("Error al consultar datos".mysqli_error($conexion));
     $filas= mysqli_fetch_assoc($resultado);
     return [
-      $filas['periodo_id'],
+      $filas['tiempo'],
+      $filas['periodo'],
+      $filas['turno'],
       $filas['nombre_est'],
       $filas['apellido_est'],
       $filas['cedula_est'],
@@ -55,24 +57,24 @@
     </div>		
     <div class="mb-3">
    <label>Período Académico </label>
-      <input class="form-control" type="text" id="periodo_id" name="periodo_id" value="<?php echo $consulta[0] ?>" readonly="true" style="background-color: gray;">
+      <input class="form-control" type="text" id="periodo_id" name="periodo_id" value="<?php echo $consulta[0], "-" ,$consulta[1], "-" ,$consulta[2]; ?>" readonly="true" style="background-color: gray;">
     </div>
     <div class="mb-3">
   		<label>Nombre </label>
-  		<input class="form-control" type="text" id="nombre_est" name="nombre_est" value="<?php echo $consulta[1] ?>">
+  		<input class="form-control" type="text" id="nombre_est" name="nombre_est" value="<?php echo $consulta[3] ?>">
     </div>
     <div class="mb-3">
           <label>Apellido </label>
-  		<input class="form-control" type="text" id="apellido_est" name="apellido_est" value="<?php echo $consulta[2] ?>">
+  		<input class="form-control" type="text" id="apellido_est" name="apellido_est" value="<?php echo $consulta[4] ?>">
     </div>
     <div class="mb-3">
           <label>Cédula</label>
-  		<input class="form-control" type="text" id="cedula_est" name="cedula_est" value="<?php echo $consulta[3] ?>">
+  		<input class="form-control" type="text" id="cedula_est" name="cedula_est" value="<?php echo $consulta[5] ?>">
     </div>
     <div class="mb-3">
           <label>Carrera </label>
     <select class="form-select" name="cod_carrera" id="cod_carrera">
-    <option value="<?php echo $consulta[4], " ",$consulta[5]; ?>"><?php echo $consulta[4], " ",$consulta[5]; ?></option>    
+    <option value="<?php echo $consulta[6], " ",$consulta[7]; ?>"><?php echo $consulta[6], " ",$consulta[7]; ?></option>    
     <?php
                 include("conexion.php");
                 $consulta = "SELECT * FROM carrera";
@@ -90,7 +92,7 @@
     
   		<br>
       <div class="botones">
-  		<button type="submit" class="btn btn-success" id="boton_guardar">Guardar</button>
+  		<button type="submit" class="btn btn-success" id="boton_guardar" name="sub">Guardar</button>
       <a href="/login_y_registro/modificar.php" id="boton_regresar">Regresar</a>
       </div> 
     </form>

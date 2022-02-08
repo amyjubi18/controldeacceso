@@ -17,10 +17,10 @@ $pdf->SetFont('Arial','B',12);
 $pdf->setY(40);$pdf->setX(65);
 $pdf->Ln();
 $pdf->Ln();
-
 $consulta ="SELECT estudiantes.id_estudiantes, periodo.tiempo,
-periodo.periodo, periodo.turno, estudiantes.nombre_est, estudiantes.apellido_est, estudiantes.cedula_est, estudiantes.cod_carrera, carrera.carreras, entrada.fecha_hora  FROM estudiantes, carrera, periodo, relacion, entrada WHERE (estudiantes.cod_carrera = carrera.cod_carrera) AND 
-(periodo.periodo_id= estudiantes.periodo) AND (relacion.id_entrada=entrada.id_entrada)  order by id_estudiantes ";
+periodo.periodo, periodo.turno, estudiantes.nombre_est, estudiantes.apellido_est, 
+estudiantes.cedula_est, estudiantes.cod_carrera, carrera.carreras, entradas.fecha_hora  
+FROM estudiantes, carrera, entradas,periodo WHERE (estudiantes.cod_carrera = carrera.cod_carrera) AND (estudiantes.cedula_est=entradas.cedula_est) AND (estudiantes.periodo_id=periodo.periodo_id)order by id_estudiantes ";
 $resultado=  mysqli_query($conexion, $consulta) or die (mysqli_error($conexion));
 $pdf->SetTextColor(0,0,0);
 $pdf->SetFont('Arial','B',20);
@@ -42,7 +42,9 @@ while ($row = mysqli_fetch_assoc($resultado)){
     $pdf->Cell(65,10, "PERIODO ACADEMICO", 1,0, 'C',0);
     $pdf->SetTextColor(0,0,0);
     $pdf->SetFont('Arial','',12);  
-    $pdf->Cell(72,10, $row['tiempo']['periodo']['turno'],1,1,'C',0);
+    $pdf->Cell(24,10, $row['tiempo'],1,0,'C',0);
+    $pdf->Cell(24,10, $row['periodo'],1,0,'C',0);
+    $pdf->Cell(24,10, $row['turno'],1,1,'C',0);
     //
     $pdf->setX(37);
     $pdf->SetFont('Arial','B',14);     
@@ -83,8 +85,16 @@ while ($row = mysqli_fetch_assoc($resultado)){
     $pdf->SetTextColor(0,0,0);
     $pdf->SetFont('Arial','',12);
     $pdf->Cell(72,10, $row['carreras'],1,1,'C',0);
+    //
+    $pdf->setX(37);
+    $pdf->SetFont('Arial','B',14);     
+    $pdf->SetTextColor(3,3,114);
+    $pdf->Cell(65,10,"ENTRADA", 1,0, 'C',0);
+    $pdf->SetTextColor(0,0,0);
+    $pdf->SetFont('Arial','',12);
+    $pdf->Cell(72,10, $row['fecha_hora'],1,1,'C',0);
     $pdf->Ln();
 
 }
 
-$pdf->output();
+$pdf->output('I', "Reporte-del-dia", false);
