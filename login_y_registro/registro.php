@@ -33,7 +33,10 @@
                 $ejecutar = mysqli_query($conexion, $consulta);
                 while($row1 = mysqli_fetch_array($ejecutar)){
                     $periodo_id = $row1['periodo_id'];
-                   echo "<option value = '".$periodo_id."'>".$periodo_id."</option>";
+                    $tiempo = $row1['tiempo'];
+                    $periodo = $row1['periodo'];
+                    $turno = $row1 ['turno'];
+                   echo "<option value = '".$periodo_id."'>".$tiempo."-".$periodo."-".$turno."</option>";
 
                 }
                 ?>

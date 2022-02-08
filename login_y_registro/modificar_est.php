@@ -54,19 +54,19 @@
     <input class="form-control" type="hidden" name="id_estudiantes" value="<?php echo $_GET['id_estudiantes']?> " readonly="true" style="background-color: gray; ">
     </div>		
     <div class="mb-3">
-   <label>Periodo </label>
+   <label>Período Académico </label>
       <input class="form-control" type="text" id="periodo_id" name="periodo_id" value="<?php echo $consulta[0] ?>" readonly="true" style="background-color: gray;">
     </div>
     <div class="mb-3">
-  		<label>Nombres del Estudiante </label>
+  		<label>Nombre </label>
   		<input class="form-control" type="text" id="nombre_est" name="nombre_est" value="<?php echo $consulta[1] ?>">
     </div>
     <div class="mb-3">
-          <label>Apellidos del Estudiante </label>
+          <label>Apellido </label>
   		<input class="form-control" type="text" id="apellido_est" name="apellido_est" value="<?php echo $consulta[2] ?>">
     </div>
     <div class="mb-3">
-          <label>Cedula del Estudiante </label>
+          <label>Cédula</label>
   		<input class="form-control" type="text" id="cedula_est" name="cedula_est" value="<?php echo $consulta[3] ?>">
     </div>
     <div class="mb-3">
