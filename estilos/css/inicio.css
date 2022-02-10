@@ -27,7 +27,7 @@ h1{
     background-repeat: no-repeat;
     background-size: contain;
     width: 170px;
-    height: 200px;
+    height: 173px;
     display: inline;
     float: left;
     border-radius: 50%;
@@ -36,7 +36,7 @@ h1{
     border: 4px solid white;
 }
 #inicio:hover{
-    background-color: #000044;
+    background-color: #4572bb;
 }
 #acceso{
     background-image: url('/estilos/img/ACCESO.png');
@@ -44,7 +44,7 @@ h1{
     background-repeat: no-repeat;
     background-size: contain;
     width: 170px;
-    height: 200px;
+    height: 173px;
     display: inline;
     float: left;
     border-radius: 50%;
@@ -53,7 +53,7 @@ h1{
     border: 4px solid white;
 }
 #acceso:hover{
-    background-color: #000044;
+    background-color: #4572bb;
 }
 #registrar{
     background-image: url('/estilos/img/REGISTRO.png');
@@ -61,7 +61,7 @@ h1{
     background-repeat: no-repeat;
     background-size: contain;
     width: 170px;
-    height: 200px;
+    height: 173px;
     display: inline;
     float: left;
     border-radius: 50%;
@@ -70,7 +70,7 @@ h1{
     border: 4px solid white;
 }
 #registrar:hover{
-    background-color: #000044;
+    background-color: #4572bb;
 }
 #listado{
     background-image: url('/estilos/img/LISTADO.png');
@@ -78,7 +78,7 @@ h1{
     background-repeat: no-repeat;
     background-size: contain;
     width: 170px;
-    height: 200px;
+    height: 173px;
     display: inline;
     float: left;
     border-radius: 50%;
@@ -87,15 +87,15 @@ h1{
     border: 4px solid white;
 }
 #listado:hover{
-    background-color: #000044;
+    background-color: #4572bb;
 }
 #cerrar{
-    background-image: url('/estilos/img/cerrar-sesion1.png');
+    background-image: url('/estilos/img/CERRAR.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     width: 170px;
-    height: 200px;
+    height: 173px;
     display: inline;
     float: left;
     border-radius: 50%;
@@ -104,7 +104,7 @@ h1{
     border: 4px solid white;
 }
 #cerrar:hover{
-    background-color: #000044;
+    background-color: #4572bb;
 }
 
 .contenedor-inicio{

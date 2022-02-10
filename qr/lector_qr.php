@@ -69,10 +69,7 @@
         </div>
             </div>
         </div>
-        <!-- <div class="abs-center">
-        <a href="/login_y_registro/generar_reporte.php"> <buttom type= 'buttom' class='btn btn-success' id="imprimir"> Imprimir Reporte </buttom> </a> 
-        <a href="eliminar2.php"> <buttom type= 'buttom' class='btn btn-danger' id="eliminar"> Eliminar </buttom> </a> 
-        </div> -->
+        
     </div>
 
     <script>

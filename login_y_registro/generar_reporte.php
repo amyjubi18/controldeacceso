@@ -97,4 +97,4 @@ while ($row = mysqli_fetch_assoc($resultado)){
 
 }
 
-$pdf->output('I', "Reporte-del-dia", false);
+$pdf->output('D', "Reporte-del-dia.pdf", false);
